@@ -4,11 +4,45 @@
 <script type="text/javascript" src="embed.js"></script>
 <script type="text/javascript">
 window.addEventListener("load", () => {
-	new ServerEmbed(document.getElementById("embed"), "75%").ping("127.0.0.1:25565");
+	const servers = [
+		"wss://8head.org",
+		"wss://search.dasboard.net",
+		"wss://learn.lexitra.com",
+		"wss://ai.vonar.ch",
+		"wss://support.pisz.ro",
+		"wss://play.myichael.org",
+		"wss://asianf4rmer.org",
+		"wss://asian.nuraad.top",
+		"wss://asianf4rmer.minecraft.pe",
+		"wss://asian.minecraft.pe",
+		"wss://asian.404.mn",
+		"wss://asian.bad.mn",
+		"wss://asianclient.vercel.app",
+		"wss://canvas.astraltech.org",
+		"wss://asian.chinapoem.org",
+		"wss://asianf4rmer.us.to",
+		"wss://asian.epicgamer.org",
+		"wss://canvas.spacetechnology.net",
+		"wss://help.localghost.org",
+		"wss://join.pegle.com",
+		"wss://signup.cloudranger.net",
+		"wss://asian.blacknapkins.org",
+		"wss://home.geobattery.com",
+		"wss://login.arph.org",
+		"wss://use.wroth.org"
+	];
+
+	servers.forEach((addr, i) => {
+		const div = document.createElement("div");
+		div.id = `embed${i}`;
+		div.style.marginBottom = "20px";
+		document.body.appendChild(div);
+		new ServerEmbed(div, "75%").ping(addr);
+	});
 });
 </script>
 </head>
-<body style="background-color:black;">
-<div id="embed"></div>
+<body style="background-color:black; color:white;">
 </body>
 </html>
+
